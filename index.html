@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Audio Only</title>
+<title>Audio Test</title>
 </head>
 <body>
 
-<audio id="myAudio" autoplay muted loop style="display:none;">
-  <source src="Ariana Grande - positions (Clean - Lyrics).mp3" type="audio/mpeg">
+<h2>Testing Audio</h2>
+
+<audio id="myAudio" controls autoplay muted loop>
+  <source src="Ariana Grade - positions (Clean - Lyrics).mp3" type="audio/mpeg">
 </audio>
 
 <script>
   const audio = document.getElementById('myAudio');
 
   window.addEventListener('load', () => {
-    audio.play().catch(() => {});
+    audio.play().catch((err) => {
+      console.log("Autoplay blocked:", err);
+    });
   });
 
   document.addEventListener('click', () => {
