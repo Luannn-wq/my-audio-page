@@ -2,20 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Audio Only</title>
+<title>Music</title>
 </head>
 <body>
 
 <audio controls autoplay muted loop>
-  <source src="Ariana Grande - positions (Clean - Lyrics).mp3" type="audio/mpeg">
+  <source src="song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
 </audio>
-
-<script>
-  const audio = document.getElementById('myAudio');
-  window.addEventListener('load', () => {
-    audio.play().catch(() => {});
-  });
-</script>
 
 </body>
 </html>
